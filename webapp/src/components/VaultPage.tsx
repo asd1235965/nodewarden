@@ -16,6 +16,7 @@ import {
   draftFromCipher,
   buildCipherDuplicateSignature,
   firstCipherUri,
+  firstPasskeyCreationTime,
   isCipherVisibleInArchive,
   isCipherVisibleInNormalVault,
   isCipherVisibleInTrash,
@@ -971,6 +972,7 @@ function folderName(id: string | null | undefined): string {
                 repromptApprovedCipherId={repromptApprovedCipherId}
                 showPassword={showPassword}
                 totpLive={totpLive}
+                passkeyCreatedAt={firstPasskeyCreationTime(selectedCipher)}
                 hiddenFieldVisibleMap={hiddenFieldVisibleMap}
                 folderName={folderName}
                 onOpenReprompt={() => setRepromptOpen(true)}
